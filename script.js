@@ -27,7 +27,24 @@ function divide(firstNum, secondNum){
 }
 
 // operate function 
-function operate(numOne, operation, numTwo) {
+function operate(numOne, numTwo, operation) {
+    // The switch statement to route the parameters to the correct function
+    switch(operation) {
+        case 'add':
+            return add(numOne, numTwo);
+            
+            case 'subtract':
+                return subtract(numOne, numTwo);
 
+                case 'multiply':
+                    return multiply(numOne, numTwo);
+
+                    case 'divide':
+                        return divide(numOne, numTwo);
+
+                        default:
+                            return 'Invalid Operation.!';
+    }
 }
+
 
