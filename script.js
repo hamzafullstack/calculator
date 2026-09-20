@@ -1,5 +1,9 @@
 // Starting with the name of ALLAH. Who is most kind and most merciful.
 
+// DOM References.
+const display = document.querySelector('#display');
+const buttons = document.querySelector('#buttons');
+
 // Calculator state Variables
 let firstNumber = 0;
 let operator = null;
