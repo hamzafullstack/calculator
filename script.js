@@ -1,25 +1,27 @@
 // Starting with the name of ALLAH. Who is most kind and most merciful.
 
+// Calculator state Variables
+let firstNumber = 0;
+operator = null;
+secondNumber = 0;
+
 // Addition function
-function add(firstNumber, secondNumber) {
-    return firstNumber + secondNumber;
+function add(firstNum, secondNum) {
+
 }
-// console.log(add(3, 5));
 
 // subtract function.
-function subtract(firstNumber, secondNumber) {
-    return firstNumber - secondNumber;
+function subtract(firstNum, secondNum) {
+    
 }
-// console.log(subtract(4, 2));
 
 // multiply function
-function multiply(firstNumber, secondNumber) {
-    return firstNumber * secondNumber;
+function multiply(firstNum, secondNum) {
+    
 }
-// console.log(multiply(4, 2));
+
 
 // divide Function.
-function divide(firstNumber, secondNumber){
-    return firstNumber / secondNumber;
+function divide(firstNum, secondNum){
+    
 }
-// console.log(divide(5, 2));
