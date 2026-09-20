@@ -2,8 +2,8 @@
 
 // Calculator state Variables
 let firstNumber = 0;
-operator = null;
-secondNumber = 0;
+let operator = null;
+let secondNumber = 0;
 
 // Addition function
 function add(firstNum, secondNum) {
@@ -25,3 +25,9 @@ function multiply(firstNum, secondNum) {
 function divide(firstNum, secondNum){
     
 }
+
+// operate function 
+function operate(numOne, operation, numTwo) {
+
+}
+
