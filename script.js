@@ -8,6 +8,7 @@ const buttonContainer = document.querySelector('#buttons');
 let firstNumber = null;
 let operator = null;
 let secondNumber = null;
+let currentNumber = '';
 
 // Addition function
 function add(firstNum, secondNum) {
@@ -36,34 +37,28 @@ function operate(numOne, numTwo, operation) {
     switch(operation) {
         case 'add':
             return add(numOne, numTwo);
-            
             case 'subtract':
                 return subtract(numOne, numTwo);
-
-                case 'multiply':
-                    return multiply(numOne, numTwo);
-
-                    case 'divide':
-                        return divide(numOne, numTwo);
-
-                        default:
-                            return 'Invalid Operation.!';
+            case 'multiply':
+                 return multiply(numOne, numTwo);
+            case 'divide':
+                return divide(numOne, numTwo);
+                default:
+                     return 'Invalid Operation.!';
     }
 }
 
 
-
 // input Digit function.
 function inputGigit(event) {
-    if(event.target.tagName === 'BUTTON') {
-        // 1 reads and stores the value in State Variable
-        firstNumber = event.target.dataset.value;
-        // 2 displays the value at calculators screen.
-        display.value = firstNumber;
-
-        // testing
-        console.log(firstNumber);
-    }
+   const button = event.target.closest('button');
+   if(!button) {
+    return;
+   }
+   if(button.dataset.value !== undefined) {
+    currentNumber += button.dataset.value;
+    display.value = currentNumber;
+   }
 }
 
 //listener
