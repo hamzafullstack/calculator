@@ -2,12 +2,12 @@
 
 // DOM References.
 const display = document.querySelector('#display');
-const buttons = document.querySelector('#buttons');
+const buttonContainer = document.querySelector('#buttons');
 
 // Calculator state Variables
-let firstNumber = 0;
+let firstNumber = null;
 let operator = null;
-let secondNumber = 0;
+let secondNumber = null;
 
 // Addition function
 function add(firstNum, secondNum) {
@@ -51,4 +51,11 @@ function operate(numOne, numTwo, operation) {
     }
 }
 
+// input Digit function.
+function inputGigit(digit) {
+    switch(digit) {
+        case 'firstNumber':
+            
+    }
+}
 
