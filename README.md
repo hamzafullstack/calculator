@@ -114,7 +114,7 @@ If you want to read about my personal coding journey, mistakes, and the exact re
 
 ### *“And say, ‘My Lord, increase me in knowledge.’”*
 
-**~ Holy Quran 20:114**
+**- Holy Quran 20:114**
 
 </div>
 
