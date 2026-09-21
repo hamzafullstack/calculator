@@ -51,11 +51,21 @@ function operate(numOne, numTwo, operation) {
     }
 }
 
+
+
 // input Digit function.
-function inputGigit(digit) {
-    switch(digit) {
-        case 'firstNumber':
-            
+function inputGigit(event) {
+    if(event.target.tagName === 'BUTTON') {
+        // 1 reads and stores the value in State Variable
+        firstNumber = event.target.dataset.value;
+        // 2 displays the value at calculators screen.
+        display.value = firstNumber;
+
+        // testing
+        console.log(firstNumber);
     }
 }
+
+//listener
+buttonContainer.addEventListener('click', inputGigit);
 
