@@ -109,3 +109,12 @@ If you want to read about my personal coding journey, mistakes, and the exact re
 
 * [My DevLog & Struggles](./DEVLOG.md)
 * [References & Learnings](./REFERENCES.md)
+
+<div align="center">
+
+### *“And say, ‘My Lord, increase me in knowledge.’”*
+
+**~ Holy Quran 20:114**
+
+</div>
+
