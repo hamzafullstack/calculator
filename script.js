@@ -9,6 +9,7 @@ let firstNumber = null;
 let operator = null;
 let secondNumber = null;
 let currentNumber = '';
+let result = null;
 
 // Addition function
 function add(firstNum, secondNum) {
@@ -35,13 +36,13 @@ function divide(firstNum, secondNum){
 function operate(numOne, numTwo, operation) {
     // The switch statement to route the parameters to the correct function
     switch(operation) {
-        case 'add':
+        case '+':
             return add(numOne, numTwo);
-            case 'subtract':
+            case '-':
                 return subtract(numOne, numTwo);
-            case 'multiply':
+            case '*':
                  return multiply(numOne, numTwo);
-            case 'divide':
+            case '/':
                 return divide(numOne, numTwo);
                 default:
                      return 'Invalid Operation.!';
@@ -49,18 +50,31 @@ function operate(numOne, numTwo, operation) {
 }
 
 
-// input Digit function.
-function inputGigit(event) {
+// Input Digit Function And State Management.
+function handleButtonClick(event) {
    const button = event.target.closest('button');
    if(!button) {
     return;
    }
+   // if number clicked.
    if(button.dataset.value !== undefined) {
     currentNumber += button.dataset.value;
     display.value = currentNumber;
+   }else if(button.dataset.operator !== undefined) { // if operator clicked (-+*/)
+    firstNumber = Number(currentNumber);
+    operator = button.dataset.operator;
+    currentNumber = '';
+    display.value = currentNumber;
+   }else if(button.dataset.action === 'equals') { // for action like (=)
+    secondNumber = Number(currentNumber);
+    result = operate(firstNumber, secondNumber, operator);
+    display.value = result;
    }
+  
 }
 
 //listener
-buttonContainer.addEventListener('click', inputGigit);
+buttonContainer.addEventListener('click', handleButtonClick);
+
+
 
