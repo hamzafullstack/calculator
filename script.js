@@ -79,6 +79,9 @@ function handleButtonClick(event) {
     currentNumber = '';
     result = null;
     display.value = '';
+   }else if(button.dataset.action === 'delete') {
+    currentNumber = currentNumber.slice(0, -1);
+    display.value = currentNumber;
    }
   
 }
