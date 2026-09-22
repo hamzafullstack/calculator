@@ -69,6 +69,14 @@ function handleButtonClick(event) {
     secondNumber = Number(currentNumber);
     result = operate(firstNumber, secondNumber, operator);
     display.value = result;
+    // for Clear display screen and state variables data.
+   }else if(button.dataset.action === 'clear') {
+    firstNumber = null;
+    secondNumber = null;
+    operator = null;
+    currentNumber = '';
+    result = null;
+    display.value = '';
    }
   
 }
