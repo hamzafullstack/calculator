@@ -1,0 +1,26 @@
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.display {
+    display: flex;
+    width: 273px; /* Set a fixed or max width for screen */
+    height: 50px;
+    font-size: 40px;
+
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 280px; /* Set a fixed or max width for keypad */
+    gap: 10px;
+   
+}
+
+.btn {
+     flex: 1 1 21%; /*grow shrink and set a base width */
+     height: 60px; /* uniform buttons height */
+     font-size: 20px; /*set a fontsize btns */
+}
