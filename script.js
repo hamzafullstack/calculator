@@ -46,6 +46,7 @@ function operate(numOne, numTwo, operation) {
                 return divide(numOne, numTwo);
                 default:
                      return 'Invalid Operation.!';
+
     }
 }
 
@@ -64,13 +65,14 @@ function handleButtonClick(event) {
     firstNumber = Number(currentNumber);
     operator = button.dataset.operator;
     currentNumber = '';
-    display.value = currentNumber;
+    display.value = `${firstNumber} ${operator}`;
    }else if(button.dataset.action === 'equals') { // for action like (=)
     secondNumber = Number(currentNumber);
     result = operate(firstNumber, secondNumber, operator);
     display.value = result;
     // for Clear display screen and state variables data.
    }else if(button.dataset.action === 'clear') {
+    // state-reinitialization pattern
     firstNumber = null;
     secondNumber = null;
     operator = null;
