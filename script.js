@@ -65,7 +65,7 @@ function handleButtonClick(event) {
     firstNumber = Number(currentNumber);
     operator = button.dataset.operator;
     currentNumber = '';
-    display.value = `${firstNumber} ${operator}`;
+    display.value = `${firstNumber} ${operator} ${currentNumber}`;
    }else if(button.dataset.action === 'equals') { // for action like (=)
     secondNumber = Number(currentNumber);
     result = operate(firstNumber, secondNumber, operator);
