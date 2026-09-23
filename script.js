@@ -81,8 +81,19 @@ function handleButtonClick(event) {
     result = null;
     display.value = '';
    }else if(button.dataset.action === 'delete') {
-    currentNumber = currentNumber.slice(0, -1);
-    display.value = currentNumber;
+    
+    if(currentNumber !== '') {
+        currentNumber = currentNumber.slice(0, -1);
+        display.value = currentNumber;
+    }else if(operator !== null && operator !== '') {
+        operator = null;
+        display.value = firstNumber;
+    }else if(firstNumber !== null && firstNumber !== '') {
+        let firstNumStr = firstNumber.toString().slice(0, -1);
+        firstNumber = firstNumStr !== '' ? Number(firstNumStr) : null;
+        display.value = firstNumStr;
+    }
+
    }
   
 }
