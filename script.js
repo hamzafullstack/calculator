@@ -61,18 +61,19 @@ function handleButtonClick(event) {
    if(button.dataset.value !== undefined) {
     currentNumber += button.dataset.value;
     display.value = currentNumber;
-   }else if(button.dataset.operator !== undefined) { // if operator clicked (-+*/)
+    // if operator clicked (-+*/)
+   }else if(button.dataset.operator !== undefined) {
     firstNumber = Number(currentNumber);
     operator = button.dataset.operator;
     currentNumber = '';
     display.value = `${firstNumber} ${operator} ${currentNumber}`;
-   }else if(button.dataset.action === 'equals') { // for action like (=)
+    // for action like (=)
+   }else if(button.dataset.action === 'equals') { 
     secondNumber = Number(currentNumber);
     result = operate(firstNumber, secondNumber, operator);
     display.value = result;
     // for Clear display screen and state variables data.
    }else if(button.dataset.action === 'clear') {
-    // state-reinitialization pattern
     firstNumber = null;
     secondNumber = null;
     operator = null;
