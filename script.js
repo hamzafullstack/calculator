@@ -105,9 +105,23 @@ function handleButtonClick(event) {
    }else if(button.dataset.action === 'percentage') {
 
     if(firstNumber !== null && operator !== null){
-        result = firstNumber * (currentNumber / 100);
-        percentageApplied = true;
-        display.value = result;
+        if(operator === '*'){
+            result = firstNumber * (currentNumber / 100);
+            percentageApplied = true;
+            display.value = result;
+        }else if (operator === '+'){
+            result = firstNumber + (firstNumber * (currentNumber / 100));
+            percentageApplied = true;
+            display.value = result;
+        }else if(operator === '-') {
+            result = firstNumber - (firstNumber * (currentNumber / 100));
+            percentageApplied = true;
+            display.value = result;
+        }else if(operator === '/'){
+            let result = firstNumber / (currentNumber / 100);
+            percentageApplied = true;
+            display.value = result;
+        }
     }
 
    }
