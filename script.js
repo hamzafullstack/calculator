@@ -10,6 +10,7 @@ let operator = null;
 let secondNumber = null;
 let currentNumber = '';
 let result = null;
+let percentageApplied = false;
 
 // Addition function
 function add(firstNum, secondNum) {
@@ -68,10 +69,16 @@ function handleButtonClick(event) {
     currentNumber = '';
     display.value = `${firstNumber} ${operator} ${currentNumber}`;
     // for action like (=)
-   }else if(button.dataset.action === 'equals') { 
+   }else if(button.dataset.action === 'equals') {
+    if(percentageApplied === true) {
+        secondNumber = result;
+        display.value = secondNumber;
+        percentageApplied = false;
+    }else{
     secondNumber = Number(currentNumber);
     result = operate(firstNumber, secondNumber, operator);
     display.value = result;
+    }
     // for Clear display screen and state variables data.
    }else if(button.dataset.action === 'clear') {
     firstNumber = null;
@@ -79,6 +86,7 @@ function handleButtonClick(event) {
     operator = null;
     currentNumber = '';
     result = null;
+    percentageApplied = false;
     display.value = '';
    }else if(button.dataset.action === 'delete') {
     
@@ -92,6 +100,14 @@ function handleButtonClick(event) {
         let firstNumStr = firstNumber.toString().slice(0, -1);
         firstNumber = firstNumStr !== '' ? Number(firstNumStr) : null;
         display.value = firstNumStr;
+    }
+
+   }else if(button.dataset.action === 'percentage') {
+
+    if(firstNumber !== null && operator !== null){
+        result = firstNumber * (currentNumber / 100);
+        percentageApplied = true;
+        display.value = result;
     }
 
    }
