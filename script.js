@@ -61,7 +61,11 @@ function handleButtonClick(event) {
    // if number clicked.
    if(button.dataset.value !== undefined) {
     currentNumber += button.dataset.value;
-    display.value = currentNumber;
+    if(firstNumber !== null && operator !== null){
+        display.value = `${firstNumber} ${operator} ${currentNumber}`
+    }else{
+        display.value = currentNumber;
+    }
     // if operator clicked (-+*/)
    }else if(button.dataset.operator !== undefined) {
     firstNumber = Number(currentNumber);
