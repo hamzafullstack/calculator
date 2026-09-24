@@ -6,21 +6,21 @@
 }
 .display {
     display: flex;
-    width: 273px; /* Set a fixed or max width for screen */
+    width: 273px;
     height: 50px;
-    font-size: 40px;
+    font-size: 25px;
 
 }
 .buttons {
     display: flex;
     flex-wrap: wrap;
-    width: 280px; /* Set a fixed or max width for keypad */
+    width: 280px;
     gap: 10px;
    
 }
-
+/* Actual Keypad buttons. */
 .btn {
      flex: 1 1 21%; /*grow shrink and set a base width */
-     height: 60px; /* uniform buttons height */
-     font-size: 20px; /*set a fontsize btns */
+     height: 60px; 
+     font-size: 20px; 
 }
