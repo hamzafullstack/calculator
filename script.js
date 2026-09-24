@@ -68,10 +68,15 @@ function handleButtonClick(event) {
     }
     // if operator clicked (-+*/)
    }else if(button.dataset.operator !== undefined) {
-    firstNumber = Number(currentNumber);
-    operator = button.dataset.operator;
-    currentNumber = '';
-    display.value = `${firstNumber} ${operator} ${currentNumber}`;
+    if(currentNumber === '') {
+        operator = button.dataset.operator;
+        display.value = `${firstNumber} ${operator}`
+    }else{
+        firstNumber = Number(currentNumber);
+        operator = button.dataset.operator;
+        currentNumber = '';
+        display.value = `${firstNumber} ${operator} ${currentNumber}`;
+    }
     // for action like (=)
    }else if(button.dataset.action === 'equals') {
     if(percentageApplied === true) {
