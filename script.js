@@ -78,7 +78,7 @@ function handleButtonClick(event) {
         secondNumber = result;
         display.value = secondNumber;
         percentageApplied = false;
-    }else{
+    }else if(firstNumber !== null && operator !== null && currentNumber !== ''){
     secondNumber = Number(currentNumber);
     result = operate(firstNumber, secondNumber, operator);
     display.value = result;
