@@ -60,14 +60,26 @@ function handleButtonClick(event) {
    }
    // if number clicked.
    if(button.dataset.value !== undefined) {
-    currentNumber += button.dataset.value;
-    if(firstNumber !== null && operator !== null){
+       if(button.dataset.value === '.') {
+           if(!currentNumber.includes('.')) {
+                currentNumber += button.dataset.value;
+        }
+    }else{
+        if(currentNumber === '0'){
+            currentNumber = button.dataset.value;
+        }else{
+            currentNumber += button.dataset.value;
+        }
+    }
+    
+if(firstNumber !== null && operator !== null){
         display.value = `${firstNumber} ${operator} ${currentNumber}`
     }else{
         display.value = currentNumber;
     }
     // if operator clicked (-+*/)
    }else if(button.dataset.operator !== undefined) {
+    if(firstNumber === null && currentNumber === '') return;
     if(currentNumber === '') {
         operator = button.dataset.operator;
         display.value = `${firstNumber} ${operator}`
