@@ -1,3 +1,6 @@
+body {
+    background-color: rgb(18, 18, 18);
+}
 main {
     display: flex;
     justify-content: center;
@@ -10,10 +13,12 @@ main {
     justify-content: center;
     align-items: center;
     width: 300px;
-    border: 2px solid black;
+    border: 2px solid rgb(0, 0, 0);
      padding: 15px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: rgb(35, 35, 35);
+
 }
 .display {
     display: flex;
