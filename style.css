@@ -11,6 +11,9 @@ main {
     align-items: center;
     width: 300px;
     border: 2px solid black;
+     padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .display {
     display: flex;
