@@ -231,3 +231,13 @@ This file documents my personal journey, chronological updates, and the real str
   I evaluated the stability of the project against **The Odin Project** submission requirements and confirmed that all functional goals and edge-case criteria were thoroughly met. Instead of delaying the submission to overengineer the CSS upfront, I decided to separate functional completeness from visual polish.
 * **The Ultimate Fix**: 
   I validated and finalized the core JavaScript logic, ensuring it is completely bug-free and ready for submission to The Odin Project dashboard. I scheduled the remaining custom CSS, color palette tweaks, and visual styling updates as a planned post launch enhancement phase to be completed in my spare time, keeping my development workflow structured and deliverable focused.
+
+  ## Final challenge
+
+### Challenge 26: Replicating Native Mobile UI/UX & Completing The Odin Project Foundations
+* **The Problem**: 
+  After hardening all state logic and edge cases, the final step was transforming a basic functional layout into a polished, professional UI that matched my phone's native calculator app 100%, followed by officially submitting the capstone to The Odin Project.
+* **My Thoughts/Attempts**: 
+  I wanted the visual experience to feel identical to a native mobile app. This required refining button geometry, grid/flex alignments, color contrast, and display padding so that the browser interface felt like a real device app rather than a web page.
+* **The Ultimate Fix**: 
+  I applied custom CSS styling modeled directly after my mobile calculator interface—tuning button responsiveness, typography scaling, and dark-mode aesthetic touches. With both logic and design at 100% fidelity, I deployed the project and submitted it as the final milestone of The Odin Project Foundations curriculum.
