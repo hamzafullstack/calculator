@@ -79,10 +79,20 @@ if(firstNumber !== null && operator !== null){
     }
     // if operator clicked (-+*/)
    }else if(button.dataset.operator !== undefined) {
+
+    if(result !== null && currentNumber === '') {
+        firstNumber = result;
+        operator = button.dataset.operator;
+        display.value = `${firstNumber} ${operator}`;
+        result = null;
+        return;
+    }
+
     if(firstNumber === null && currentNumber === '') return;
+
     if(currentNumber === '') {
         operator = button.dataset.operator;
-        display.value = `${firstNumber} ${operator}`
+        display.value = `${firstNumber} ${operator}`;
     }else{
         firstNumber = Number(currentNumber);
         operator = button.dataset.operator;
@@ -99,6 +109,9 @@ if(firstNumber !== null && operator !== null){
     secondNumber = Number(currentNumber);
     result = operate(firstNumber, secondNumber, operator);
     display.value = result;
+    if(result !== null) {
+        currentNumber = ''
+    }
     }
     // for Clear display screen and state variables data.
    }else if(button.dataset.action === 'clear') {
