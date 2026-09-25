@@ -27,6 +27,7 @@ main {
     flex-wrap: wrap;
     width: 300px;
     gap: 10px;
+    
    
 }
 /* Actual Keypad buttons. */
@@ -34,4 +35,6 @@ main {
      flex: 1 1 21%; /*grow shrink and set a base width */
      height: 60px; 
      font-size: 20px; 
+     border-radius: 50%;
+     margin-top: 5px;
 }
